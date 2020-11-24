@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
@@ -29,6 +31,10 @@ public class Taller3 {
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Guardaremos la opcion del usuario
+        Archivo a= new Archivo();
+        int n;
+        PriorityQueue<Ciudad> cola;
+        //Scanner scanner = new Scanner(System.in);
  
         while (!salir) {
  
@@ -43,13 +49,23 @@ public class Taller3 {
  
                 switch (opcion) {
                     case 1:
-                        System.out.println("Has seleccionado la opcion 1");
-                        Archivo a= new Archivo();
-                        a.leer();
+                        System.out.println("Has seleccionado la opcion Guayaquil. Escribe el numero de lugares que deseas ver");
+                        n=sn.nextInt();
+                        
+                        cola = a.leer(1);
+                        for(int i=0; i<n;i++){
+                            System.out.println(cola.poll());
+                        }
                         
                         break;
                     case 2:
-                        System.out.println("Has seleccionado la opcion 2");
+                        System.out.println("Has seleccionado la opcion Guayaquil. Escribe el numero de lugares que deseas ver");
+                        n=sn.nextInt();
+                        
+                        cola = a.leer(2);
+                        for(int i=0; i<n;i++){
+                            System.out.println(cola.poll());
+                        }
                         break;
                     case 3:
                         salir = true;
