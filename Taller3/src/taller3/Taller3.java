@@ -61,7 +61,8 @@ public class Taller3 {
         }
  
          //.....................LEER ARCHIVO.....................................
-        List<Integer> list = new ArrayList<Integer>();
+    
+      /*   List<Integer> list = new ArrayList<Integer>();
         File file = new File("file.txt");
         BufferedReader reader = null;
 
@@ -86,8 +87,13 @@ public class Taller3 {
         }
 
 System.out.println(list);
-    }
-}
+    }*/
+      
+      Archivo a=new Archivo();
+      a.leer();
+      
+      
+}}
         
         
     
