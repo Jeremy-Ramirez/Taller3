@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.PriorityQueue;
 import java.util.Scanner;
+import java.io.File;
 
 /**
  *
@@ -35,9 +36,21 @@ public class Taller3 {
         int n;
         PriorityQueue<Ciudad> cola;
         //Scanner scanner = new Scanner(System.in);
+        
+           File dir = new File("src");
+           String[] ficheros = dir.list();
+           if (ficheros == null)
+            System.out.println("No hay ficheros en el directorio especificado");
+            else { 
+                for (int x=0;x<ficheros.length;x++)
+                    
+                    System.out.println(ficheros[x]);
+                    System.out.println(ficheros.length);
+                    }
+        
  
         while (!salir) {
- 
+            
             System.out.println("1.Guayaquil");
             System.out.println("2.Quito");
             System.out.println("3. Salir");
@@ -78,40 +91,6 @@ public class Taller3 {
                 sn.next();
             }
         }
- 
-         //.....................LEER ARCHIVO.....................................
-    
-      /*   List<Integer> list = new ArrayList<Integer>();
-        File file = new File("file.txt");
-        BufferedReader reader = null;
-
-        try {
-            reader = new BufferedReader(new FileReader(file));
-            String text = null;
-
-            while ((text = reader.readLine()) != null) {
-                list.add(Integer.parseInt(text));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (reader != null) {
-                   reader.close();
-                }
-            }catch (IOException e) {
-            }
-        }
-
-System.out.println(list);
-    }*/
-      
-      //Archivo a=new Archivo();
-      //a.leer();
-        //System.out.println();
-      
       
 }}
         
