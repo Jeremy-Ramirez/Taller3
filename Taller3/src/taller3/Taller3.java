@@ -17,6 +17,7 @@ import java.util.ListIterator;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.io.File;
+import java.util.Arrays;
 
 /**
  *
@@ -34,27 +35,34 @@ public class Taller3 {
         int opcion; //Guardaremos la opcion del usuario
         Archivo a= new Archivo();
         int n;
+        int c;
         PriorityQueue<Ciudad> cola;
         //Scanner scanner = new Scanner(System.in);
         
            File dir = new File("src");
            String[] ficheros = dir.list();
+           int n2=1;
            if (ficheros == null)
             System.out.println("No hay ficheros en el directorio especificado");
             else { 
-                for (int x=0;x<ficheros.length;x++)
+               Arrays.sort(ficheros);
                     
-                    System.out.println(ficheros[x]);
-                    System.out.println(ficheros.length);
+                for (int x=0;x<ficheros.length;x++){
+                    if(ficheros[x].endsWith("txt")){
+                    System.out.println(n2+" "+ficheros[x].subSequence(0, ficheros[x].length()-4));
+                    n2++;
+                    }
+                }
+                 c=n2;
+                System.out.println((0)+" Salir");
+                    
+                    
                     }
         
  
         while (!salir) {
             
-            System.out.println("1.Guayaquil");
-            System.out.println("2.Quito");
-            System.out.println("3. Salir");
- 
+            
             try {
  
                 System.out.println("Escribe una de las opciones");
@@ -72,7 +80,7 @@ public class Taller3 {
                         
                         break;
                     case 2:
-                        System.out.println("Has seleccionado la opcion Guayaquil. Escribe el numero de lugares que deseas ver");
+                        System.out.println("Has seleccionado la opcion Quito. Escribe el numero de lugares que deseas ver");
                         n=sn.nextInt();
                         
                         cola = a.leer(2);
@@ -80,11 +88,11 @@ public class Taller3 {
                             System.out.println(cola.poll());
                         }
                         break;
-                    case 3:
+                    case 0:
                         salir = true;
                         break;
                     default:
-                        System.out.println("Solo números entre 1 y 3");
+                        System.out.println("Solo números entre 0 y 2");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un número");
