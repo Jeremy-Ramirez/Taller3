@@ -50,11 +50,11 @@ public class Pais {
         this.idiomaOficial = idiomaOficial;
     }
 
-    public List<Ciudad> getCiudades() {
+    public ArrayList<Ciudad> getCiudades() {
         return ciudades;
     }
 
-    public void setCiudades(List<Ciudad> ciudades) {
+    public void setCiudades(ArrayList<Ciudad> ciudades) {
         this.ciudades = ciudades;
     }
     
