@@ -11,8 +11,17 @@ import java.util.Comparator;
  */
 public class PorPuntaje implements Comparator<Ciudad>{
     public int compare(Ciudad c1, Ciudad c2){
-        if(c1.getPuntaje() > c2.getPuntaje()) return 0;
-        if(c1.getPuntaje() == c2.getPuntaje()) return 1;
+        if(c1.getPuntaje() < c2.getPuntaje()) return 1;
+        if(c1.getPuntaje() == c2.getPuntaje()){
+            if(c1.getLongitud()< c2.getLongitud()){
+                return 1;
+            }
+            if(c1.getLongitud()==c2.getLongitud()){
+                if(c1.getLatitud()<c2.getLatitud()){
+                    return 1;
+                }
+            }
+        }
         return -1;
     }
 

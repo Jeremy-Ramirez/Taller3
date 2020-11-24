@@ -44,6 +44,9 @@ public class Taller3 {
                 switch (opcion) {
                     case 1:
                         System.out.println("Has seleccionado la opcion 1");
+                        Archivo a= new Archivo();
+                        a.leer();
+                        
                         break;
                     case 2:
                         System.out.println("Has seleccionado la opcion 2");
@@ -89,9 +92,9 @@ public class Taller3 {
 System.out.println(list);
     }*/
       
-      Archivo a=new Archivo();
-      a.leer();
-        System.out.println();
+      //Archivo a=new Archivo();
+      //a.leer();
+        //System.out.println();
       
       
 }}

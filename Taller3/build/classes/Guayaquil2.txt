@@ -1,0 +1,12 @@
+Lugar,Longitud,Latitud,puntaje
+Archivo Historico del Guayas,-79.8923546,-5.1647503,4.8
+Barco Pirata Morgan,-79.8923546,-2.196707,4.8
+Biblioteca Municipal,-79.88257,-2.19566,4.6
+Casa de la Cultura,-79.8886339,-2.1893128,3.5
+Casa de los Titeres,-79.8990802,-2.1862966,2
+Casa familia Z S,-79.9064696,-2.0930505,1.1
+Centro Comercial y Artesanal MACHALA,-79.8927631,-2.1967177,1.8
+Centro de Escalada,-79.9216362,-2.1064767,3.3
+cerro pseudo ito,-79.9263951,-2.1674878,2.6
+Cerro Santa Ana,-79.8832223,-2.1811692,1.7
+Faro del Cerro Santa Ana,-79.8754872,-2.1809472,2

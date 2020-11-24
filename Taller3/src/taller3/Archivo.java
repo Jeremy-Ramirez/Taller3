@@ -20,13 +20,14 @@ import java.util.StringTokenizer;
 public class Archivo {
     
     public void leer(){
-        //LinkedList<Ciudad> ciudad = new LinkedList();
+        LinkedList<Ciudad> ciudad = new LinkedList();
         //PriorityQueue<Ciudad> colaPrioridad = new PriorityQueue<>((Ciudad c1, Ciudad c2) -> c1.getPuntaje()-c2.getPuntaje());
         PriorityQueue<Ciudad> colaPrioridad = new PriorityQueue<>(new PorPuntaje());
+        
         try{
             
             
-            FileReader fr= new FileReader(new File("src\\Guayaquil.txt"));
+            FileReader fr= new FileReader(new File("src\\Guayaquil2.txt"));
             BufferedReader br= new BufferedReader(fr);
             String linea;
             br.readLine();
@@ -46,8 +47,10 @@ public class Archivo {
             
             System.out.println(e);
         }
-        System.out.println(colaPrioridad.toString());
-        
+        //System.out.println(colaPrioridad.toString());
+        while(!colaPrioridad.isEmpty()){
+            System.out.println(colaPrioridad.poll());
+        }
     }
     
     
