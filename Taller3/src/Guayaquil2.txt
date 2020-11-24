@@ -1,6 +1,7 @@
 Lugar,Longitud,Latitud,puntaje
 Archivo Historico del Guayas,-79.8923546,-5.1647503,4.8
 Barco Pirata Morgan,-79.8923546,-2.196707,4.8
+Archivo Historico del Guayas,-80.8923546,-5.1647503,4.8
 Biblioteca Municipal,-79.88257,-2.19566,4.6
 Casa de la Cultura,-79.8886339,-2.1893128,3.5
 Casa de los Titeres,-79.8990802,-2.1862966,2
