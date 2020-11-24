@@ -53,7 +53,6 @@ public class Taller3 {
                     n2++;
                     }
                 }
-                 c=n2;
                 System.out.println((0)+" Salir");
                     
                     
