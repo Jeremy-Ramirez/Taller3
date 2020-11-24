@@ -54,7 +54,10 @@ public class Ciudad {
     public void setPuntaje(double puntaje) {
         this.puntaje = puntaje;
     }
-    
+    @Override
+    public String toString() {
+        return "Ciudad{" + "Lugar=" + lugar + ", Longitud=" + Longitud + ", Latitud=" + Latitud + ", Puntaje=" + puntaje + '}';
+    }
     
     
     

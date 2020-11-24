@@ -8,6 +8,8 @@ package taller3;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayDeque;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -16,6 +18,7 @@ import java.io.FileReader;
 public class Archivo {
     
     public void leer(){
+        ArrayDeque a= new ArrayDeque();
         
         try{
             
@@ -23,8 +26,16 @@ public class Archivo {
             FileReader fr= new FileReader(new File("src\\Guayaquil.txt"));
             BufferedReader br= new BufferedReader(fr);
             String linea;
+            br.readLine();
             while((linea=br.readLine())!=null){
-                System.out.println(linea);
+                 StringTokenizer word = new StringTokenizer(linea,",\n");
+                        while(word.hasMoreTokens()){
+                               Ciudad c = new Ciudad(word.nextToken(), Double.valueOf(word.nextToken()), Double.valueOf(word.nextToken()), Double.valueOf(word.nextToken()));
+                               a.add(c);
+                               
+                               System.out.println(c);
+                               
+                    }
             }
             
             
