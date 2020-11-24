@@ -91,6 +91,7 @@ System.out.println(list);
       
       Archivo a=new Archivo();
       a.leer();
+        System.out.println();
       
       
 }}

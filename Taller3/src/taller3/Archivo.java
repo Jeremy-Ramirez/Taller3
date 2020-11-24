@@ -9,6 +9,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 /**
@@ -18,8 +20,9 @@ import java.util.StringTokenizer;
 public class Archivo {
     
     public void leer(){
-        ArrayDeque a= new ArrayDeque();
-        
+        //LinkedList<Ciudad> ciudad = new LinkedList();
+        //PriorityQueue<Ciudad> colaPrioridad = new PriorityQueue<>((Ciudad c1, Ciudad c2) -> c1.getPuntaje()-c2.getPuntaje());
+        PriorityQueue<Ciudad> colaPrioridad = new PriorityQueue<>(new PorPuntaje());
         try{
             
             
@@ -31,9 +34,8 @@ public class Archivo {
                  StringTokenizer word = new StringTokenizer(linea,",\n");
                         while(word.hasMoreTokens()){
                                Ciudad c = new Ciudad(word.nextToken(), Double.valueOf(word.nextToken()), Double.valueOf(word.nextToken()), Double.valueOf(word.nextToken()));
-                               a.add(c);
+                               colaPrioridad.offer(c);
                                
-                               System.out.println(c);
                                
                     }
             }
@@ -44,6 +46,7 @@ public class Archivo {
             
             System.out.println(e);
         }
+        System.out.println(colaPrioridad.toString());
         
     }
     
